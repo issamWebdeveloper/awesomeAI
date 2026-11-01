@@ -1,0 +1,4 @@
+# Fiche relue : livekit
+livekit:
+  goal: "Faire transiter audio et vidéo temps réel entre utilisateurs et agents IA via WebRTC."
+  problem_solved: "Construire une infrastructure média temps réel fiable est complexe ; LiveKit fournit le serveur prêt à l'emploi."

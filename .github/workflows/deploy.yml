@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  schedule:
+    # Recollecte hebdomadaire des données (lundi 5 h UTC).
+    - cron: '0 5 * * 1'
 
 permissions:
   contents: read
@@ -18,19 +21,29 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
     steps:
       - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Tests du collecteur
+        run: cargo test --workspace
+      - name: Collecte des données (liste source, README, API GitHub)
+        # En cas d'échec, le site est construit avec les dernières données versionnées.
+        continue-on-error: true
+        run: cargo run -p collector --release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
+        working-directory: web
       - run: npm run check
+        working-directory: web
       - run: npm run build
+        working-directory: web
         env:
           BASE_PATH: /${{ github.event.repository.name }}
       - uses: actions/upload-pages-artifact@v3

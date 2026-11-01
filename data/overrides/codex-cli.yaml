@@ -1,0 +1,4 @@
+# Fiche relue : codex-cli
+codex-cli:
+  goal: "Faire lire, modifier et exécuter le code d'un dépôt par un agent depuis le terminal."
+  problem_solved: "Automatiser les tâches de développement répétitives en gardant l'exécution sur sa propre machine."

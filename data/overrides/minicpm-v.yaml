@@ -1,0 +1,4 @@
+# Fiche relue : minicpm-v
+minicpm-v:
+  goal: "Comprendre images, vidéos et documents avec un modèle multimodal assez léger pour tourner en local."
+  problem_solved: "Les grands modèles de vision exigent des GPU coûteux ; MiniCPM-V offre de bonnes performances sur du matériel modeste."

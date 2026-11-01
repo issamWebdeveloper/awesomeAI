@@ -1,0 +1,4 @@
+# Fiche relue : crawl4ai
+crawl4ai:
+  goal: "Explorer le web et convertir les pages en Markdown propre pour les pipelines d'IA."
+  problem_solved: "Alimenter un RAG ou un agent en contenu web demande un crawler adapté aux LLM, gratuit et auto-hébergé."

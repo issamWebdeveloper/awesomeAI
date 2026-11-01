@@ -1,0 +1,6 @@
+# Fiche relue : llama-cpp
+llama-cpp:
+  goal: "Exécuter des LLM au format GGUF efficacement sur CPU et sur de nombreux GPU."
+  problem_solved: "Les LLM demandent normalement de gros GPU ; llama.cpp les rend utilisables sur du matériel courant grâce à la quantification."
+  openai_compatible: true
+  hardware: ["cpu", "nvidia", "amd", "apple-silicon", "intel", "vulkan"]

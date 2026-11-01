@@ -1,0 +1,4 @@
+# Fiche relue : markitdown-microsoft
+markitdown-microsoft:
+  goal: "Convertir des fichiers Office, PDF et images en Markdown prêt pour un LLM."
+  problem_solved: "Les LLM lisent mal les formats bureautiques ; MarkItDown produit un texte structuré exploitable pour l'analyse ou le RAG."

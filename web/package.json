@@ -7,7 +7,8 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-kit sync && svelte-check"
+    "check": "svelte-kit sync && svelte-check",
+    "collect": "cd .. && cargo run -p collector --release"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^4.0.1",
@@ -18,5 +19,8 @@
     "svelte-check": "^4.7.8",
     "typescript": "^6.0.3",
     "vite": "^8.3.5"
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
   }
 }

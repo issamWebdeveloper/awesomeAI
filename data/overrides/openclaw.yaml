@@ -1,0 +1,4 @@
+# Fiche relue : openclaw
+openclaw:
+  goal: "Disposer d'un assistant IA personnel qui relie vos messageries à des agents tournant sur votre machine."
+  problem_solved: "Les assistants grand public gardent vos conversations ; OpenClaw garde données et agents en local."

@@ -1,0 +1,4 @@
+# Fiche relue : new-api
+new-api:
+  goal: "Regrouper de nombreux fournisseurs de modèles derrière une seule clé, avec quotas et facturation."
+  problem_solved: "Distribuer l'accès aux LLM à des équipes ou clients demande comptage et contrôle ; la passerelle centralise tout."

@@ -1,0 +1,4 @@
+# Fiche relue : ragflow
+ragflow:
+  goal: "Construire un moteur RAG qui comprend des documents complexes et cite ses sources."
+  problem_solved: "Un découpage naïf des documents donne de mauvaises réponses ; RAGFlow analyse la structure et fournit des citations."

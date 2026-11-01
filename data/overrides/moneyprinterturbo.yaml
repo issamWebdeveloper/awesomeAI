@@ -1,0 +1,4 @@
+# Fiche relue : moneyprinterturbo
+moneyprinterturbo:
+  goal: "Produire automatiquement de courtes vidéos à partir d'un sujet : script, images et voix off."
+  problem_solved: "Créer du contenu vidéo court demande beaucoup de montage manuel ; l'outil enchaîne toutes les étapes."

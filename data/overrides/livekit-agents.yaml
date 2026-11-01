@@ -1,0 +1,4 @@
+# Fiche relue : livekit-agents
+livekit-agents:
+  goal: "Développer des agents vocaux et vidéo temps réel branchés sur LiveKit."
+  problem_solved: "Relier reconnaissance vocale, LLM et synthèse dans une conversation fluide demande un framework dédié."

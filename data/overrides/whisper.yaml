@@ -1,0 +1,4 @@
+# Fiche relue : whisper
+whisper:
+  goal: "Transcrire la parole en texte dans de nombreuses langues avec le modèle de référence d'OpenAI."
+  problem_solved: "Les services de transcription sont payants et envoient l'audio dans le cloud ; Whisper tourne en local."

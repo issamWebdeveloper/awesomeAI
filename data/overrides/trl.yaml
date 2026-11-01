@@ -1,0 +1,4 @@
+# Fiche relue : trl
+trl:
+  goal: "Post-entraîner des modèles de langage (SFT, DPO, GRPO) avec l'écosystème Hugging Face."
+  problem_solved: "Aligner un modèle sur des préférences ou une tâche demande des algorithmes complexes ; TRL les fournit prêts à l'emploi."

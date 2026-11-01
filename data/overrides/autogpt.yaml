@@ -1,0 +1,4 @@
+# Fiche relue : autogpt
+autogpt:
+  goal: "Créer, exécuter et surveiller des agents IA autonomes qui enchaînent des tâches sans intervention."
+  problem_solved: "Transformer un objectif en suite d'actions demande planification et outils ; AutoGPT fournit une plateforme visuelle pour bâtir ces agents."

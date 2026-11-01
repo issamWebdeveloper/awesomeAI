@@ -1,0 +1,4 @@
+# Fiche relue : mineru
+mineru:
+  goal: "Transformer des PDF complexes en Markdown ou JSON en conservant tableaux, formules et mise en page."
+  problem_solved: "Les PDF scientifiques et techniques perdent leur structure à l'extraction ; MinerU la reconstitue pour le RAG et l'analyse."

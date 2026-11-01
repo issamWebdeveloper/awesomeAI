@@ -1,0 +1,4 @@
+# Fiche relue : playwright-mcp
+playwright-mcp:
+  goal: "Donner aux clients LLM le contrôle d'un navigateur via Playwright et le protocole MCP."
+  problem_solved: "Automatiser le web à partir de captures d'écran est fragile ; l'outil s'appuie sur l'arbre d'accessibilité, plus fiable."

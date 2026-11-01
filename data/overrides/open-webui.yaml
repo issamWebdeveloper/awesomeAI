@@ -1,0 +1,5 @@
+# Fiche relue : open-webui
+open-webui:
+  goal: "Offrir une interface de chat complète, type ChatGPT, au-dessus de modèles locaux (Ollama) ou d'API."
+  problem_solved: "Les équipes veulent un assistant conversationnel sans envoyer leurs données à un tiers ; Open WebUI ajoute RAG, outils et gestion des utilisateurs sur leur propre serveur."
+  features: ["multi-provider", "local-models", "rag-docs", "plugins", "agents-support", "multimodal", "multi-user", "web-search", "mcp-support"]

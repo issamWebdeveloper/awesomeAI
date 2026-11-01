@@ -1,0 +1,4 @@
+# Fiche relue : opencode
+opencode:
+  goal: "Disposer d'un agent de code autonome directement dans le terminal."
+  problem_solved: "Déléguer modifications et exécutions de code à un LLM sans quitter la ligne de commande ni être lié à un fournisseur."

@@ -1,0 +1,4 @@
+# Fiche relue : langfuse
+langfuse:
+  goal: "Tracer, évaluer et versionner les prompts des applications LLM."
+  problem_solved: "Sans visibilité sur les appels LLM, impossible de déboguer ni de mesurer la qualité ; Langfuse fournit traces et évaluations."
