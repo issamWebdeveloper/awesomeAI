@@ -1,0 +1,4 @@
+# Fiche relue : comfyui
+comfyui:
+  goal: "Construire et exécuter des pipelines de génération d'images et de vidéos par nœuds, en local."
+  problem_solved: "Les interfaces simples limitent le contrôle fin de la diffusion ; ComfyUI expose chaque étape pour des workflows reproductibles."

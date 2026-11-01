@@ -1,0 +1,4 @@
+# Fiche relue : n8n
+n8n:
+  goal: "Automatiser des processus métier en reliant applications, API et étapes d'IA dans des workflows visuels."
+  problem_solved: "Écrire et maintenir des scripts d'intégration est long ; n8n permet d'assembler visuellement des automatisations avec agents IA, hébergées chez soi."

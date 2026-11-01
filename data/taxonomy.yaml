@@ -1,0 +1,340 @@
+# Vocabulaire contrôlé d'Awesome AI.
+#
+# - categories : les 16 catégories de la liste source (champ `name` = nom anglais exact),
+#   avec leur libellé français, leur couleur, leur synthèse et les fonctionnalités comparables.
+# - features : dictionnaire des fonctionnalités. Une fonctionnalité est attribuée à un outil si
+#   l'un de ses mots-clés apparaît (mot entier, sans casse) dans le nom, la description, les
+#   topics GitHub ou, sauf `readme: false`, le début du README.
+# - facets : caractéristiques transverses (déploiement, interfaces, matériel), cherchées dans
+#   tout le README.
+#
+# La détection est automatique et peut se tromper : pour corriger un outil, ajouter une entrée
+# dans data/overrides/ (voir data/overrides/README.md). Une valeur relue n'est jamais écrasée.
+
+categories:
+  - slug: agents-et-automatisation
+    name: Agents and Automation
+    label: Agents et automatisation
+    color: "#6366f1"
+    description: "Frameworks et plateformes pour construire des agents IA autonomes qui planifient, utilisent des outils, gardent une mémoire et enchaînent des tâches."
+    goal: "Construire et exécuter des agents IA qui accomplissent des tâches en plusieurs étapes."
+    problem: "Un LLM seul répond à une question ; il faut une couche d'orchestration pour lui donner des outils, une mémoire et un plan d'action fiable."
+    features: [multi-agent, memory, tool-calling, workflows, visual-builder, browser-automation, sandbox, computer-use, human-in-the-loop, structured-output, tracing, mcp-support]
+
+  - slug: interfaces-de-chat
+    name: Chat Interfaces
+    label: Interfaces de chat
+    color: "#0ea5e9"
+    description: "Applications web ou de bureau pour discuter avec des modèles locaux ou distants, souvent avec documents, plugins et gestion d'utilisateurs."
+    goal: "Offrir une interface de conversation conviviale au-dessus de modèles locaux ou d'API."
+    problem: "Les modèles auto-hébergés n'ont pas d'interface grand public ; ces outils apportent un équivalent de ChatGPT sous votre contrôle."
+    features: [multi-provider, local-models, rag-docs, plugins, agents-support, multimodal, multi-user, personas, web-search, mcp-support]
+
+  - slug: assistants-de-code
+    name: Coding Assistants
+    label: Assistants de code
+    color: "#10b981"
+    description: "Agents et extensions qui écrivent, modifient, expliquent ou relisent du code, dans le terminal, l'éditeur ou les pull requests."
+    goal: "Aider les développeurs à écrire, comprendre et relire du code avec un LLM."
+    problem: "Les assistants de code commerciaux envoient le code source dans le cloud ; ces outils fonctionnent avec des modèles locaux ou au choix."
+    features: [terminal-agent, ide-extension, code-completion, autonomous-agent, code-review, codebase-index, git-integration, local-models, multi-provider, mcp-support]
+
+  - slug: documents-et-ocr
+    name: Document AI and OCR
+    label: Documents et OCR
+    color: "#f59e0b"
+    description: "Outils qui extraient texte, tableaux, formules et structure de PDF, images ou scans pour les rendre exploitables par des LLM."
+    goal: "Transformer des documents (PDF, scans, images) en texte structuré exploitable."
+    problem: "Les documents réels mêlent mise en page, tableaux et images ; il faut les convertir proprement avant toute recherche ou RAG."
+    features: [ocr, pdf-conversion, layout, tables, formulas, markdown-output, vlm, multilingual, handwriting, batch]
+
+  - slug: fine-tuning-et-entrainement
+    name: Fine-Tuning and Training
+    label: Fine-tuning et entraînement
+    color: "#ef4444"
+    description: "Bibliothèques et interfaces pour adapter un modèle à vos données (LoRA, entraînement complet, alignement) sur votre propre matériel."
+    goal: "Adapter ou entraîner des modèles sur vos propres données et votre matériel."
+    problem: "Les modèles génériques ne connaissent pas votre domaine ; le fine-tuning les spécialise sans dépendre d'un service externe."
+    features: [lora, full-finetune, rlhf, quantization, distributed, memory-efficient, dataset-tools, multimodal, evals]
+
+  - slug: ia-personnelle-et-maison
+    name: Home and Personal AI
+    label: IA personnelle et maison
+    color: "#84cc16"
+    description: "Assistants et applications du quotidien qui gardent vos données chez vous : domotique, photos, notes, voix, e-mails."
+    goal: "Apporter l'IA aux usages personnels et domestiques sans envoyer vos données dans le cloud."
+    problem: "Les assistants grand public exploitent vos données privées ; ces outils offrent les mêmes services en local."
+    features: [home-automation, voice-assistant, personal-knowledge, photos, email-calendar, documents-archive, memory, privacy, mobile]
+
+  - slug: generation-image-et-video
+    name: Image and Video Generation
+    label: Génération d'images et de vidéos
+    color: "#ec4899"
+    description: "Interfaces et modèles de génération d'images et de vidéos (diffusion) à faire tourner sur vos propres GPU."
+    goal: "Générer et retoucher des images ou des vidéos à partir de texte ou d'images sur votre GPU."
+    problem: "Les générateurs en ligne sont payants, filtrés et gardent vos créations ; l'auto-hébergement rend le contrôle et la confidentialité."
+    features: [text-to-image, text-to-video, node-workflow, inpainting, controlnet, upscaling, lora-support, low-vram, plugins]
+
+  - slug: runtimes-llm-et-inference
+    name: LLM Runtimes and Inference
+    label: Runtimes LLM et inférence
+    color: "#8b5cf6"
+    description: "Moteurs qui chargent et servent des modèles de langage sur CPU ou GPU, du portable au cluster, souvent avec une API compatible OpenAI."
+    goal: "Exécuter et servir des modèles de langage localement ou sur vos serveurs."
+    problem: "Faire tourner un LLM efficacement demande quantification, gestion mémoire et API standard ; ces runtimes s'en chargent."
+    features: [quantization, gguf, multi-gpu, batching, kv-cache, speculative, streaming, model-hub, multimodal, structured-output, tool-calling, edge]
+
+  - slug: serveurs-et-passerelles-mcp
+    name: MCP Servers and Gateways
+    label: Serveurs et passerelles MCP
+    color: "#14b8a6"
+    description: "Serveurs Model Context Protocol qui exposent des outils et des données aux agents, et passerelles qui les regroupent et les sécurisent."
+    goal: "Connecter les agents et assistants IA à des outils et des données via le protocole MCP."
+    problem: "Chaque assistant intègre les outils à sa façon ; MCP standardise l'accès et les passerelles centralisent sécurité et découverte."
+    features: [mcp-server, mcp-gateway, auth, transport, policy, browser-automation, database, filesystem, web-search, tracing]
+
+  - slug: passerelles-et-routeurs-de-modeles
+    name: Model Gateways and Routers
+    label: Passerelles et routeurs de modèles
+    color: "#f97316"
+    description: "Proxys qui placent une API unique devant plusieurs fournisseurs ou modèles, avec routage, quotas, cache et suivi des coûts."
+    goal: "Accéder à de nombreux modèles et fournisseurs derrière une seule API maîtrisée."
+    problem: "Multiplier les fournisseurs complique clés, coûts et pannes ; une passerelle unifie l'accès et ajoute bascule et contrôle."
+    features: [multi-provider, load-balancing, failover, caching, rate-limiting, cost-tracking, key-management, guardrails, tracing]
+
+  - slug: observabilite-et-evaluation
+    name: Observability and Evals
+    label: Observabilité et évaluation
+    color: "#64748b"
+    description: "Plateformes de traces, d'évaluation, de gestion de prompts et de surveillance pour les applications LLM en production."
+    goal: "Mesurer, tracer et évaluer la qualité des applications LLM."
+    problem: "Les réponses d'un LLM sont non déterministes ; sans traces ni évaluations, impossible de savoir si une application s'améliore ou régresse."
+    features: [tracing, evals, prompt-management, dataset-tools, cost-tracking, dashboards, opentelemetry, guardrails, red-teaming, gpu-monitoring]
+
+  - slug: rag-et-bases-vectorielles
+    name: RAG and Vector Databases
+    label: RAG et bases vectorielles
+    color: "#3b82f6"
+    description: "Bases vectorielles et frameworks de génération augmentée par la recherche (RAG) pour répondre à partir de vos propres documents."
+    goal: "Permettre à un LLM de répondre à partir de vos documents grâce à la recherche vectorielle."
+    problem: "Un LLM ignore vos données internes et invente quand il ne sait pas ; le RAG retrouve les bons passages et cite ses sources."
+    features: [vector-search, hybrid-search, ingestion, graph-rag, reranking, filtering, multi-tenancy, scalability, citations, visual-builder]
+
+  - slug: recherche-et-connaissances
+    name: Search and Knowledge
+    label: Recherche et connaissances
+    color: "#a855f7"
+    description: "Moteurs de recherche IA, outils de recherche approfondie et bases de connaissances qui indexent le web ou vos fichiers."
+    goal: "Retrouver et synthétiser l'information, sur le web ou dans vos propres fichiers."
+    problem: "La recherche par mots-clés trouve des pages, pas des réponses ; ces outils combinent recherche et synthèse en gardant les données chez vous."
+    features: [web-search, answer-engine, deep-research, semantic-search, local-index, knowledge-base, connectors, ocr, citations]
+
+  - slug: parole-et-audio
+    name: Speech and Audio
+    label: Parole et audio
+    color: "#e11d48"
+    description: "Transcription (speech-to-text), synthèse vocale (text-to-speech), clonage de voix et génération audio en local."
+    goal: "Transcrire, synthétiser ou transformer la voix et l'audio sur votre machine."
+    problem: "Les services vocaux du cloud facturent à la minute et écoutent vos enregistrements ; ces modèles tournent hors ligne."
+    features: [stt, tts, voice-cloning, realtime, diarization, multilingual, emotion, translation, music]
+
+  - slug: vision-et-multimodal
+    name: Vision and Multimodal
+    label: Vision et multimodal
+    color: "#06b6d4"
+    description: "Modèles et outils qui comprennent les images et la vidéo : détection, description, questions visuelles."
+    goal: "Analyser et comprendre images et vidéos avec des modèles locaux."
+    problem: "Interpréter le contenu visuel demandait des API propriétaires ; ces modèles le font sur votre matériel."
+    features: [object-detection, vlm, image-understanding, video-analysis, ocr, face, edge]
+
+  - slug: agents-vocaux
+    name: Voice Agents
+    label: Agents vocaux
+    color: "#d946ef"
+    description: "Frameworks pour construire des assistants vocaux temps réel qui écoutent, réfléchissent et répondent, y compris au téléphone."
+    goal: "Construire des agents conversationnels qui parlent et écoutent en temps réel."
+    problem: "Enchaîner reconnaissance vocale, LLM et synthèse avec une latence faible et la gestion des interruptions est difficile ; ces frameworks l'orchestrent."
+    features: [realtime, stt, tts, turn-detection, telephony, webrtc, memory, avatars, multimodal]
+
+features:
+  # Agents
+  multi-agent: { label: Multi-agents, keywords: [multi-agent, multi agent, multiagent, multi-agents, teams of agents, team of agents, subagents, swarm, crew] }
+  memory: { label: Mémoire persistante, keywords: [memory, long-term memory, persistent memory, stateful, remembers] }
+  tool-calling: { label: Appel d'outils, keywords: [tool calling, tool-calling, tool use, function calling, function-calling, tool-use] }
+  workflows: { label: Workflows durables, keywords: [workflow, workflows, long-running, durable, orchestration, orchestrating, checkpointing] }
+  visual-builder: { label: Éditeur visuel, keywords: [visual builder, visual flow, drag-and-drop, drag and drop, no-code, low-code, visual workflow, workflow builder, flow builder, visual editor] }
+  browser-automation: { label: Automatisation du navigateur, keywords: [browser automation, drive a real browser, web automation, playwright, puppeteer, headless chrome, selenium, browser sandbox] }
+  sandbox: { label: Exécution isolée, keywords: [sandbox, sandboxes, sandboxed, microvm, microvms, isolation, isolated execution] }
+  computer-use: { label: Contrôle de l'ordinateur, keywords: [computer-use, computer use, gui agent, desktop control, control a local computer, control your computer] }
+  human-in-the-loop: { label: Validation humaine, keywords: [human-in-the-loop, human in the loop, approvals, approval workflow, durable approvals] }
+  structured-output: { label: Sorties structurées, keywords: [structured output, structured outputs, json schema, json mode, grammar, constrained decoding, type-safe] }
+  tracing: { label: Traces et suivi, keywords: [tracing, traces, observability, run monitoring, spans, telemetry] }
+  mcp-support: { label: Support MCP, keywords: [mcp, model context protocol] }
+
+  # Chat
+  multi-provider: { label: Multi-fournisseurs, keywords: [multi-provider, many llm providers, many providers, multiple providers, multiple llm providers, multi-model, 100+ llm, any model provider, model-agnostic, llm providers] }
+  local-models: { label: Modèles locaux, keywords: [local models, local model, local llm, local llms, ollama, llama.cpp, locally hosted, run locally] }
+  rag-docs: { label: Chat avec des documents, keywords: [rag, chat with documents, chatting with documents, chat with your documents, knowledge base, knowledge bases, document search, file uploads] }
+  plugins: { label: Plugins et extensions, keywords: [plugins, plugin, extensions, extension ecosystem, custom nodes] }
+  agents-support: { label: Agents intégrés, keywords: [agents, agent mode, agentic] }
+  multimodal: { label: Multimodal, keywords: [multimodal, multi-modal, vision, image input, voice input, multimodal input] }
+  multi-user: { label: Multi-utilisateurs, keywords: [multi-user, user management, sso, rbac, ldap, role-based access] }
+  personas: { label: Personnages et préréglages, keywords: [personas, persona, characters, roleplay, roleplaying, character cards, presets] }
+  web-search: { label: Recherche web, keywords: [web search, internet search, searxng, search the web, web sources] }
+
+  # Code
+  terminal-agent: { label: Agent en terminal, keywords: [terminal, terminal-based, cli, command line, command-line] , readme: false }
+  ide-extension: { label: Extension d'éditeur, keywords: [vs code, vscode, jetbrains, neovim, ide, editor extension, visual studio code] }
+  code-completion: { label: Autocomplétion, keywords: [autocomplete, autocompletion, code completion, tab completion, fill-in-the-middle, inline completion] }
+  autonomous-agent: { label: Agent autonome, keywords: [autonomous, coding agent, coding agents, agent mode, agentic coding] }
+  code-review: { label: Revue de code, keywords: [code review, code reviewer, pull request reviews, pr review, reviews pull requests] }
+  codebase-index: { label: Indexation du code, keywords: [codebase, repository map, repo map, code search, context engine, indexed] }
+  git-integration: { label: Intégration Git, keywords: [git, commits, pull request, pull requests, github], readme: false }
+
+  # Documents
+  ocr: { label: OCR, keywords: [ocr, optical character recognition, text recognition, text inside them] }
+  pdf-conversion: { label: Conversion de PDF, keywords: [pdf, pdfs] }
+  layout: { label: Analyse de mise en page, keywords: [layout, layout analysis, reading order, document structure] }
+  tables: { label: Extraction de tableaux, keywords: [table, tables, table extraction, table recognition] }
+  formulas: { label: Formules et équations, keywords: [formula, formulas, latex, equations, math] }
+  markdown-output: { label: Sortie Markdown / JSON, keywords: [markdown, to json, json output, html output] }
+  vlm: { label: Modèle vision-langage, keywords: [vision-language, vision language model, vlm, vlms, multimodal model] }
+  multilingual: { label: Multilingue, keywords: [multilingual, multi-lingual, 100+ languages, 80+ languages, many languages, cross-lingual] }
+  handwriting: { label: Écriture manuscrite, keywords: [handwriting, handwritten] }
+  batch: { label: Traitement par lots, keywords: [batch, batch processing, large-scale, at scale] }
+
+  # Fine-tuning
+  lora: { label: LoRA / QLoRA, keywords: [lora, qlora, peft, adapters] }
+  full-finetune: { label: Entraînement complet, keywords: [full fine-tuning, full-parameter, full parameter, pretraining, pre-training, pretrain] }
+  rlhf: { label: Alignement (RLHF, DPO), keywords: [rlhf, dpo, ppo, grpo, orpo, kto, reinforcement learning, preference optimization] }
+  quantization: { label: Quantification, keywords: [quantization, quantized, quantize, 4-bit, 8-bit, int4, int8, bitsandbytes, awq, gptq, fp8] }
+  distributed: { label: Multi-GPU / distribué, keywords: [distributed, multi-gpu, multi-node, deepspeed, fsdp, megatron] }
+  memory-efficient: { label: Faible mémoire, keywords: [memory-efficient, less memory, less vram, low vram, low-vram, consumer gpu, consumer gpus, 2x faster] }
+  dataset-tools: { label: Gestion de jeux de données, keywords: [dataset, datasets, synthetic data, data preparation, annotation] }
+  evals: { label: Évaluations, keywords: [evaluation, evaluations, evals, eval, benchmark, benchmarks, benchmarking, llm-as-a-judge, scoring] }
+
+  # Maison
+  home-automation: { label: Domotique, keywords: [home assistant, smart home, home automation, iot] }
+  voice-assistant: { label: Assistant vocal, keywords: [voice assistant, wake word, voice control, voice] }
+  personal-knowledge: { label: Notes et connaissances, keywords: [notes, journal, second brain, bookmarks, personal knowledge, notebook] }
+  photos: { label: Photos, keywords: [photos, photo, photo library, gallery, face recognition] }
+  email-calendar: { label: E-mails et agenda, keywords: [email, e-mail, calendar, contacts, inbox] }
+  documents-archive: { label: Archivage de documents, keywords: [paperless, receipts, invoices, document management, archive] }
+  privacy: { label: Hors ligne / confidentialité, keywords: [privacy, privacy-first, private, offline, on-device, local-first] }
+  mobile: { label: Application mobile, keywords: [mobile, android, ios, iphone] }
+
+  # Image et vidéo
+  text-to-image: { label: Texte vers image, keywords: [text-to-image, text to image, image generation, stable diffusion, flux, sdxl, generate images] }
+  text-to-video: { label: Génération vidéo, keywords: [text-to-video, image-to-video, video generation, video model, video models] }
+  node-workflow: { label: Éditeur à nœuds, keywords: [node-based, node graph, nodes, graph interface, workflows] }
+  inpainting: { label: Retouche (inpainting), keywords: [inpainting, outpainting, img2img, image-to-image, image editing] }
+  controlnet: { label: ControlNet / guidage, keywords: [controlnet, ip-adapter, pose control, depth control] }
+  upscaling: { label: Agrandissement, keywords: [upscale, upscaling, upscaler, super-resolution, super resolution] }
+  lora-support: { label: Modèles LoRA, keywords: [lora, loras, dreambooth, textual inversion] }
+  low-vram: { label: Faible VRAM, keywords: [low vram, low-vram, consumer gpu, consumer gpus, 6gb, 8gb, low-end] }
+
+  # Runtimes
+  gguf: { label: Format GGUF, keywords: [gguf, ggml] }
+  multi-gpu: { label: Multi-GPU, keywords: [multi-gpu, multiple gpus, tensor parallel, tensor parallelism, pipeline parallelism, distributed inference] }
+  batching: { label: Batching continu, keywords: [continuous batching, dynamic batching, batching, in-flight batching] }
+  kv-cache: { label: Cache KV optimisé, keywords: [kv cache, kv-cache, paged attention, pagedattention, prefix caching, radixattention] }
+  speculative: { label: Décodage spéculatif, keywords: [speculative decoding, speculative] }
+  streaming: { label: Streaming, keywords: [streaming, stream tokens, server-sent events] }
+  model-hub: { label: Catalogue de modèles, keywords: [hugging face, huggingface, model library, model hub, model registry, pull models] }
+  edge: { label: Edge / mobile, keywords: [edge, raspberry pi, embedded, on-device, android, ios, webgpu, browser] }
+
+  # MCP
+  mcp-server: { label: Serveur MCP, keywords: [mcp server, mcp servers] }
+  mcp-gateway: { label: Passerelle / agrégateur MCP, keywords: [gateway, mcp gateway, proxy, aggregator, aggregate, registry, hub] }
+  auth: { label: Authentification, keywords: [oauth, oauth2, authentication, access control, rbac, api keys] }
+  transport: { label: Transports (stdio, SSE, HTTP), keywords: [stdio, sse, streamable http, http transport, websocket] }
+  policy: { label: Politiques et permissions, keywords: [policy, policies, allowlist, permissions, guardrails, audit] }
+  database: { label: Bases de données, keywords: [database, databases, sql, postgres, postgresql, sqlite, mysql] }
+  filesystem: { label: Fichiers, keywords: [filesystem, file system, local files] }
+
+  # Passerelles
+  load-balancing: { label: Répartition de charge, keywords: [load balancing, load-balancing, load balancer, round-robin, routing] }
+  failover: { label: Bascule automatique, keywords: [failover, fallback, fallbacks, retries, retry] }
+  caching: { label: Cache, keywords: [cache, caching, semantic cache] }
+  rate-limiting: { label: Quotas et limites, keywords: [rate limit, rate limits, rate limiting, rate-limit, quotas, quota] }
+  cost-tracking: { label: Suivi des coûts, keywords: [cost, costs, spend, budget, budgets, billing, usage tracking, cost tracking] }
+  key-management: { label: Gestion des clés, keywords: [api keys, virtual keys, key rotation, key management] }
+  guardrails: { label: Garde-fous, keywords: [guardrails, pii, content filtering, moderation, safety] }
+
+  # Observabilité
+  prompt-management: { label: Gestion de prompts, keywords: [prompt management, prompt versioning, prompt engineering, playground, prompt experimentation] }
+  dashboards: { label: Tableaux de bord, keywords: [dashboard, dashboards, analytics] }
+  opentelemetry: { label: OpenTelemetry, keywords: [opentelemetry, otel] }
+  red-teaming: { label: Red teaming / sécurité, keywords: [red teaming, red-teaming, jailbreak, vulnerability scanning, security testing, prompt injection] }
+  gpu-monitoring: { label: Surveillance GPU / perfs, keywords: [gpu use, gpu usage, tokens per second, memory usage, latency] }
+
+  # RAG
+  vector-search: { label: Recherche vectorielle, keywords: [vector search, vector database, vector store, similarity search, embeddings, ann, hnsw] }
+  hybrid-search: { label: Recherche hybride, keywords: [hybrid search, bm25, full-text, full text search, keyword search] }
+  ingestion: { label: Ingestion et découpage, keywords: [ingestion, ingest, chunking, parsing, etl, data connectors] }
+  graph-rag: { label: Graphe de connaissances, keywords: [knowledge graph, graphrag, graph rag, graph-based, graph] }
+  reranking: { label: Reranking, keywords: [rerank, reranking, reranker] }
+  filtering: { label: Filtrage par métadonnées, keywords: [metadata filtering, filtering, filters] }
+  multi-tenancy: { label: Multi-locataires, keywords: [multi-tenant, multi-tenancy, tenants, namespaces] }
+  scalability: { label: Passage à l'échelle, keywords: [horizontal scaling, horizontally scalable, scalable, billions, sharding, replication, distributed] }
+  citations: { label: Citations des sources, keywords: [citations, cites, cite, cited, sources] }
+
+  # Recherche
+  answer-engine: { label: Moteur de réponses, keywords: [answer engine, answering, question answering, answers] }
+  deep-research: { label: Recherche approfondie, keywords: [deep research, research agent, research assistant, deep-research] }
+  semantic-search: { label: Recherche sémantique, keywords: [semantic search, semantic, embeddings, vector] }
+  local-index: { label: Index local, keywords: [local search, indexed on your own machine, offline, on your own machine, desktop search] }
+  knowledge-base: { label: Base de connaissances, keywords: [knowledge base, wiki, notes, personal knowledge] }
+  connectors: { label: Connecteurs (Drive, Slack…), keywords: [connectors, slack, google drive, confluence, notion, integrations] }
+
+  # Parole
+  stt: { label: Transcription (STT), keywords: [speech-to-text, speech to text, transcription, transcribe, asr, whisper, stt, speech recognition] }
+  tts: { label: Synthèse vocale (TTS), keywords: [text-to-speech, text to speech, tts, speech synthesis] }
+  voice-cloning: { label: Clonage de voix, keywords: [voice cloning, clones a voice, clone voices, zero-shot] }
+  realtime: { label: Temps réel, keywords: [real-time, realtime, low latency, low-latency, streaming] }
+  diarization: { label: Identification des locuteurs, keywords: [diarization, speaker identification, speaker diarization] }
+  emotion: { label: Expressivité / émotions, keywords: [emotion, emotions, expressive, prosody] }
+  translation: { label: Traduction, keywords: [translation, translate, speech translation] }
+  music: { label: Musique et audio, keywords: [music, song, songs, audio generation, sound effects] }
+
+  # Vision
+  object-detection: { label: Détection d'objets, keywords: [object detection, detection, yolo, segmentation, segment] }
+  image-understanding: { label: Compréhension d'images, keywords: [captioning, visual question answering, vqa, image understanding, describe images] }
+  video-analysis: { label: Analyse vidéo, keywords: [video understanding, video analysis, video] }
+  face: { label: Visages, keywords: [face, faces, facial] }
+
+  # Agents vocaux
+  turn-detection: { label: Gestion des tours de parole, keywords: [turn detection, interruption, interruptions, barge-in, vad, voice activity detection] }
+  telephony: { label: Téléphonie, keywords: [telephony, phone, phone calls, sip, twilio, pstn] }
+  webrtc: { label: WebRTC / WebSocket, keywords: [webrtc, websocket, websockets, livekit] }
+  avatars: { label: Avatars, keywords: [avatar, avatars] }
+
+facets:
+  deployment:
+    docker: { label: Docker, keywords: [docker, docker compose, docker-compose, dockerfile, ghcr.io, container image] }
+    kubernetes: { label: Kubernetes, keywords: [kubernetes, helm, k8s] }
+    pip: { label: pip / PyPI, keywords: [pip install, pipx install, uv pip install, uv add, uvx, pypi] }
+    npm: { label: npm, keywords: [npm install, npx, pnpm add, pnpm install, yarn add, bun add, npm i] }
+    cargo: { label: Cargo, keywords: [cargo install] }
+    homebrew: { label: Homebrew, keywords: [brew install] }
+    binary: { label: Binaire / script, keywords: [single binary, prebuilt binaries, pre-built binaries, binary release, download the latest release, go install, curl -fssl, curl -sSfL] }
+    desktop-app: { label: Application de bureau, keywords: [desktop app, desktop application, desktop client, .dmg, appimage, .exe, windows installer] }
+  interfaces:
+    web-ui: { label: Interface web, keywords: [web ui, webui, web interface, web app, web application, gradio, streamlit] }
+    cli: { label: Ligne de commande, keywords: [cli, command line, command-line] }
+    tui: { label: Interface terminal (TUI), keywords: [tui, terminal ui, terminal user interface] }
+    rest-api: { label: API REST / HTTP, keywords: [rest api, restful, http api, api server, openapi, grpc, api endpoint, api endpoints] }
+    python-sdk: { label: SDK Python, keywords: [python sdk, python library, python package, python api, pip install] }
+    typescript-sdk: { label: SDK TypeScript / JS, keywords: [typescript sdk, javascript sdk, js sdk, node.js sdk, typescript library, npm install] }
+    mcp: { label: MCP, keywords: [mcp, model context protocol] }
+  hardware:
+    cpu: { label: CPU, keywords: [cpu, cpu-only, cpus] }
+    nvidia: { label: NVIDIA (CUDA), keywords: [cuda, nvidia] }
+    amd: { label: AMD (ROCm), keywords: [rocm, amd] }
+    apple-silicon: { label: Apple Silicon, keywords: [apple silicon, metal, mlx, m1, m2, m3, m4] }
+    intel: { label: Intel, keywords: [intel, openvino, xpu, sycl] }
+    vulkan: { label: Vulkan, keywords: [vulkan] }
+
+openai_compatible:
+  label: API compatible OpenAI
+  keywords: [openai-compatible, openai compatible, openai api compatible, openai-style, openai format, drop-in replacement for openai, /v1/chat/completions, openai api]

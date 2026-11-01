@@ -1,0 +1,4 @@
+# Fiche relue : chrome-devtools-mcp
+chrome-devtools-mcp:
+  goal: "Permettre aux agents de code de contrôler et d'inspecter un navigateur Chrome local."
+  problem_solved: "Un agent ne voit pas ce que rend une page web ; ce serveur MCP lui donne accès aux DevTools pour déboguer."

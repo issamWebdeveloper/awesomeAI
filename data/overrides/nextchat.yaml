@@ -1,0 +1,4 @@
+# Fiche relue : nextchat
+nextchat:
+  goal: "Déployer en quelques minutes un client de chat léger connecté à de nombreux fournisseurs de LLM."
+  problem_solved: "Utiliser plusieurs fournisseurs depuis une même interface simple, sans dépendre de leurs applications officielles."

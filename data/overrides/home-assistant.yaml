@@ -1,0 +1,4 @@
+# Fiche relue : home-assistant
+home-assistant:
+  goal: "Piloter la maison connectée en local, avec assistants vocaux et agents conversationnels."
+  problem_solved: "Les écosystèmes domotiques propriétaires dépendent du cloud ; Home Assistant centralise tous les appareils chez soi."

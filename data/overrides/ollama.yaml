@@ -1,0 +1,7 @@
+# Fiche relue : ollama
+ollama:
+  goal: "Télécharger et faire tourner des LLM open source en local avec une seule commande et une API HTTP."
+  problem_solved: "Installer un modèle, choisir sa quantification et l'exposer en API est fastidieux ; Ollama simplifie tout cela sur poste ou serveur."
+  openai_compatible: true
+  hardware: ["cpu", "nvidia", "amd", "apple-silicon"]
+  features: ["quantization", "gguf", "streaming", "model-hub", "multimodal", "structured-output", "tool-calling"]

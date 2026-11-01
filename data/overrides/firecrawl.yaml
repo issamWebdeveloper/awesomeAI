@@ -1,0 +1,4 @@
+# Fiche relue : firecrawl
+firecrawl:
+  goal: "Récupérer et explorer des sites web pour en sortir du Markdown ou du JSON propre pour les LLM."
+  problem_solved: "Le HTML brut est bruité et difficile à exploiter ; Firecrawl fournit un contenu nettoyé prêt pour le RAG ou les agents."

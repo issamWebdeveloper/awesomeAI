@@ -1,0 +1,4 @@
+# Fiche relue : cvat
+cvat:
+  goal: "Annoter images et vidéos pour entraîner des modèles de vision par ordinateur."
+  problem_solved: "Préparer des jeux de données étiquetés est long et collaboratif ; CVAT fournit l'outil web adapté."

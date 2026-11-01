@@ -1,0 +1,4 @@
+# Fiche relue : llama-factory
+llama-factory:
+  goal: "Fine-tuner plus de 100 LLM et VLM avec LoRA, QLoRA ou RLHF depuis une interface unifiée."
+  problem_solved: "Chaque modèle a ses scripts d'entraînement ; LLaMA-Factory unifie la méthode et la rend accessible sans écrire de code."

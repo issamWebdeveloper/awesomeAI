@@ -1,0 +1,5 @@
+# Fiche relue : litellm
+litellm:
+  goal: "Appeler plus de 100 API de LLM au format OpenAI via un SDK ou un proxy unique."
+  problem_solved: "Chaque fournisseur a son API ; LiteLLM unifie l'accès et ajoute budgets, clés virtuelles et bascule."
+  openai_compatible: true

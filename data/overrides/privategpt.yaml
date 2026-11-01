@@ -1,0 +1,4 @@
+# Fiche relue : privategpt
+privategpt:
+  goal: "Interroger ses documents hors ligne via une API de type OpenAI."
+  problem_solved: "Les données sensibles ne peuvent pas partir dans le cloud ; PrivateGPT fait tout le RAG en local."

@@ -1,0 +1,4 @@
+# Fiche relue : gpt-sovits
+gpt-sovits:
+  goal: "Cloner une voix à partir de quelques secondes d'audio et générer de la parole."
+  problem_solved: "Créer une voix de synthèse personnalisée demandait des heures d'enregistrement ; quelques échantillons suffisent ici."

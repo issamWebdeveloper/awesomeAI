@@ -1,0 +1,4 @@
+# Fiche relue : pipecat
+pipecat:
+  goal: "Construire des agents vocaux et multimodaux temps réel en Python."
+  problem_solved: "Enchaîner STT, LLM et TTS avec une faible latence et la gestion des interruptions est difficile ; Pipecat orchestre ce pipeline."

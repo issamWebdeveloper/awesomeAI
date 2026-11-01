@@ -1,0 +1,5 @@
+# Fiche relue : vllm
+vllm:
+  goal: "Servir des LLM en production avec un débit élevé et une API compatible OpenAI."
+  problem_solved: "Servir beaucoup d'utilisateurs simultanés gaspille la mémoire GPU ; vLLM l'optimise (PagedAttention, batching continu)."
+  openai_compatible: true

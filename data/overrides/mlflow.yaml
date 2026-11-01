@@ -1,0 +1,4 @@
+# Fiche relue : mlflow
+mlflow:
+  goal: "Gérer le cycle de vie des modèles et des applications LLM : traces, prompts, évaluations, registre."
+  problem_solved: "Suivre expériences et versions de modèles à la main devient vite ingérable ; MLflow les centralise."

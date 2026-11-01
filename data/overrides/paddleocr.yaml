@@ -1,0 +1,4 @@
+# Fiche relue : paddleocr
+paddleocr:
+  goal: "Détecter et reconnaître le texte dans les images et documents, avec analyse de mise en page."
+  problem_solved: "Extraire le texte de scans et photos sans service OCR payant, dans de nombreuses langues."

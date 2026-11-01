@@ -1,0 +1,4 @@
+# Fiche relue : lobechat
+lobechat:
+  goal: "Fournir une interface de chat moderne et extensible pour de nombreux fournisseurs de modèles."
+  problem_solved: "Réunir chat multimodal, plugins et bases de connaissances dans une seule application auto-hébergée."
